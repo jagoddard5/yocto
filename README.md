@@ -12,7 +12,7 @@ repo sync -j$(nproc)
 MACHINE=imx93-var-som DISTRO=fsl-imx-wayland . var-setup-release.sh build_wayland
 
 # Build
-source setup-environment build_xwayland
+source setup-environment build_wayland
 bitbake fsl-image-gui
 bitbake fsl-image-gui
 ```
