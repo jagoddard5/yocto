@@ -1,4 +1,4 @@
-# Setup
+# Setup:
 
 ```
 # Sync repos
@@ -17,6 +17,8 @@ bitbake fsl-image-gui
 bitbake fsl-image-gui
 ```
 
-
-# Ref
+# Ref:
 https://dev.variscite.com/var-som-mx93/mx93-yocto-scarthgap-6.6.52_2.2.0-v1.2/yocto-build-release/#create-a-bootable-sd-card
+https://github.com/varigit/variscite-bsp-platform/tree/scarthgap
+https://github.com/varigit/variscite-bsp-platform
+
