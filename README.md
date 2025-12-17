@@ -14,7 +14,7 @@ MACHINE=imx93-var-som DISTRO=fsl-imx-wayland . var-setup-release.sh build_waylan
 # Build
 source setup-environment build_wayland
 bitbake fsl-image-gui
-bitbake fsl-image-gui
+bitbake fsl-image-qt6
 ```
 
 # Ref:
