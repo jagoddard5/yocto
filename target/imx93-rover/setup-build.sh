@@ -4,7 +4,7 @@
 export BUILD_DIR=${PWD}/build
 export REPO_SYNC_FILE=${BUILD_DIR}/.repo-synced
 export ENV_SETUP_FILE=${BUILD_DIR}/.env_setup
-export BUILD_CONFIG=rover
+export BUILD_CONFIG=build-rover
 export CONFIG_DIR=${BUILD_DIR}/${BUILD_CONFIG}
 export YOCTO_DIR=${BUILD_DIR}/${BUILD_CONFIG}/conf
 export YOCTO_DROPIN_DIR=${PWD}/yocto-dropin
@@ -22,7 +22,7 @@ fi
 
 # Setup the build environment
 if [ ! -f ${ENV_SETUP_FILE} ]; then
-MACHINE=imx93-var-som DISTRO=fsl-imx-wayland . var-setup-release.sh ${BUILD_CONFIG}
+MACHINE=imx93-var-som DISTRO=fsl-imx-wayland . var-setup-release.sh ${CONFIG_DIR}
 touch ${ENV_SETUP_FILE}
 fi
 
@@ -30,5 +30,6 @@ fi
 cp -r ${YOCTO_DROPIN_DIR}/* ${YOCTO_DIR}/
 
 # Build the image
+./var-start-container.sh
 
 popd
